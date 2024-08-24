@@ -1,4 +1,4 @@
-# Cloud Run Actix Hello
+# Rust Actix Web Minimal Docker Image
 
 This project demonstrates how to build and run a Rust application using Docker, with a focus on security and efficiency.
 
