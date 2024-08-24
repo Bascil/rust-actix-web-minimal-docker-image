@@ -26,6 +26,18 @@ docker run --init -p 8080:8080 -t servercrust/cloud-run-app
 
 Note: The `--init` option is optional.
 
+3. Test app using curl
+
+```
+curl localhost:8000
+```
+
+4. Load test using **wrk** with _8 threads_, _256 connections_ for _30 seconds_ duration (about 40k req/sec)
+
+```
+wrk -t8 -c256 -d30s http://localhost:8080
+```
+
 ## Docker and Multistage Builds
 
 A Docker image is a lightweight, standalone, executable package that includes everything needed to run a piece of software. Images are built from a Dockerfile, which contains instructions to generate the image.
