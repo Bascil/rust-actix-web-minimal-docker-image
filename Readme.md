@@ -32,10 +32,21 @@ Note: The `--init` option is optional.
 curl localhost:8000
 ```
 
-4. Load test using **wrk** with _8 threads_, _256 connections_ for _30 seconds_ duration (about 40k req/sec)
+4. Load test using **wrk** with _8 threads_, _256 connections_ for _30 seconds_ duration (about 50k req/sec)
 
 ```
 wrk -t8 -c256 -d30s http://localhost:8080
+```
+
+```
+Running 30s test @ http://localhost:8080
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.81ms    4.35ms 144.35ms   87.94%
+    Req/Sec     7.39k   839.75    15.28k    80.21%
+  1767602 requests in 30.07s, 219.14MB read
+Requests/sec:  58780.61
+Transfer/sec:      7.29MB
 ```
 
 ## Docker and Multistage Builds
