@@ -1,0 +1,12 @@
+# use the official rust docker image
+FROM rust
+
+COPY . /app
+# set work directory to app folder
+WORKDIR /app
+
+#build the app
+RUN cargo build --release
+
+# start the application
+CMD ["./target/release/cloud-run-actix-hello"]
