@@ -1,7 +1,7 @@
 # separate building of dependencies from building of application
 # if we can cache buiding dependencies we can greatly reduce build time
 # if you make a small code change it doesnt need to compile and download dependencies
-# it can used the cached versions of that image
+# it can use the cached versions of that image
 
 # stage 1 - planning - generate recipe file for dependencies
 # use the rust official image as our builder
